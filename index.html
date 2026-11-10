@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda | Invitación Digital</title>
+    
+    <!-- Enlaces oficiales y completos a las fuentes premium de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <!-- Música de fondo (Archivo local) -->
+    <audio id="musica-boda" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <!-- Botón Flotante Minimalista de Música -->
+    <button id="btn-musica" class="control-musica-flotante" onclick="controlarMusica()">
+        <span id="icono-musica">▶</span>
+    </button>
+
+    <!-- Portada / Hero -->
+    <header class="hero">
+        <div class="hero-content">
+            <p class="subtitulo">¡Nos Casamos!</p>
+            <h1 class="nombres-novios">Fulanito y Fulanita</h1>
+            <p class="fecha-texto">Sábado, 17 de Octubre de 2027</p>
+            <button id="btn-calendario" class="btn-principal">
+                Añadir al Calendario
+            </button>
+        </div>
+    </header>
+
+    <!-- Cuenta Regresiva -->
+    <section class="contador-seccion">
+        <h2>Faltan muy pocos días...</h2>
+        <div id="countdown" class="timer">
+            <div class="tiempo-bloque"><span id="dias">00</span><p>Días</p></div>
+            <div class="tiempo-bloque"><span id="horas">00</span><p>Horas</p></div>
+            <div class="tiempo-bloque"><span id="minutos">00</span><p>Min</p></div>
+            <div class="tiempo-bloque"><span id="segundos">00</span><p>Seg</p></div>
+        </div>
+        <a href="#asistencia" class="btn-principal">Confirmar Asistencia</a>
+    </section>
+
+    <!-- Nuestra Historia -->
+    <section class="historia-seccion">
+        <h2>Nuestra Historia</h2>
+        <p class="descripcion-seccion">Espacio interactivo para previsualizar los recuerdos de los novios</p>
+        <div class="opciones-regalos">
+            <div class="tarjeta-regalo" style="text-align: center;">
+                <img src="foto1.jpg" alt="Recuerdo novios 1" style="width:100%; border-radius:8px; margin-bottom:10px;">
+                <p>Recuerdo novios 1</p>
+            </div>
+            <div class="tarjeta-regalo" style="text-align: center;">
+                <img src="foto2.png" alt="Recuerdo novios 2" style="width:100%; border-radius:8px; margin-bottom:10px;">
+                <p>Recuerdo novios 2</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- El Gran Día / Línea del Tiempo -->
+    <section class="itinerario-seccion">
+        <h2>El Gran Día</h2>
+        <p class="descripcion-seccion">No te pierdas ni un solo momento de nuestra celebración</p>
+        
+        <div class="itinerario-timeline">
+            <!-- Evento 1 -->
+            <div class="timeline-item">
+                <div class="timeline-icono">I</div>
+                <div class="timeline-contenido">
+                    <span class="timeline-hora">17:00 hrs</span>
+                    <h3>Ceremonia Religiosa</h3>
+                    <p><strong>Lugar:</strong> Iglesia Central</p>
+                </div>
+            </div>
+
+            <!-- Evento 2 -->
+            <div class="timeline-item">
+                <div class="timeline-icono">II</div>
+                <div class="timeline-contenido">
+                    <span class="timeline-hora">19:30 hrs</span>
+                    <h3>Brindis de bienvenida</h3>
+                    <p><strong>Lugar:</strong> Jardín de Eventos</p>
+                </div>
+            </div>
+
+            <!-- Evento 3 -->
+            <div class="timeline-item">
+                <div class="timeline-icono">III</div>
+                <div class="timeline-contenido">
+                    <span class="timeline-hora">20:00 hrs</span>
+                    <h3>Banquete</h3>
+                    <p><strong>Lugar:</strong> Jardín de Eventos</p>
+                </div>
+            </div>
+
+            <!-- Evento 4 -->
+            <div class="timeline-item">
+                <div class="timeline-icono">IV</div>
+                <div class="timeline-contenido">
+                    <span class="timeline-hora">21:00 hrs</span>
+                    <h3>Fiesta</h3>
+                    <p><strong>Lugar:</strong> Jardín de Eventos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Mesa de Regalos -->
+    <section class="regalos-seccion">
+        <h2>Mesa de Regalos</h2>
+        <p class="descripcion-seccion">Su presencia es nuestro mejor regalo, pero si desean tener un detalle con nosotros, aquí tienen algunas opciones.</p>
+        <div class="opciones-regalos">
+            <div class="tarjeta-regalo">
+                <h3>Liverpool / Amazon</h3>
+                <p><strong>Número de mesa:</strong> 12345678</p>
+                <a href="#" class="btn-secundario" target="_blank" style="margin-top: 15px;">Ver Mesa</a>
+            </div>
+            <div class="tarjeta-regalo">
+                <h3>Transferencia Bancaria</h3>
+                <p><strong>CLABE:</strong> 0123 4567 8901 2345 67</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Código de Vestimenta -->
+    <section class="vestimenta-seccion">
+        <h2>Código de Vestimenta</h2>
+        <p class="descripcion-seccion">Queremos que luzcas espectacular en nuestro gran día</p>
+        <div class="tarjeta-vestimenta">
+            
+            <h3>Formal / Etiqueta</h3>
+            <p><strong>Hombres:</strong> Traje obscuro o Smoking.</p>
+            <p><strong>Mujeres:</strong> Vestido largo (se solicita evitar el color blanco y tonos crema).</p>
+        </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section class="ubicacion-seccion">
+        <h2>Ubicación</h2>
+        <p class="descripcion-seccion">Acompáñanos en este momento tan especial</p>
+        <div class="tarjetas-ubicacion">
+            <div class="tarjeta-mapa">
+                <h3>Ceremonia Religiosa</h3>
+                <p><strong>Lugar:</strong> Catedral de Nuestra Señora de la Inmaculada Concepción de Puebla</p>
+                <p><strong>Dirección:</strong> C. 16 de Septiembre s/n, Centro histórico de Puebla, 72000 Heroica Puebla de Zaragoza, Pue.</p>
+                <a href="https://maps.app.goo.gl/VJoPcWUMMCndVftL9" target="_blank" class="btn-secundario">Ver en Google Maps</a>
+            </div>
+            <div class="tarjeta-mapa">
+                <h3>Recepción y Fiesta</h3>
+                <p><strong>Lugar:</strong> Hacienda Xanath</p>
+                <p><strong>Dirección:</strong> 72530, C. 10 B Sur 3916, Anzures, 72530 Heroica Puebla de Zaragoza, Pue.</p>
+                <a href="https://maps.app.goo.gl/K9rV7yiENvJwHc1Q8" target="_blank" class="btn-secundario">Ver en Google Maps</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Asistencia -->
+    <section id="asistencia" class="asistencia-seccion">
+        <h2>Asistencia</h2>
+        <p class="descripcion-seccion">Por favor responde antes de la fecha límite</p>
+        <form class="formulario-asistencia" id="form-asistencia">
+            <div class="input-group">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" required placeholder="Ej. Juan Pérez">
+            </div>
+            <div class="input-group">
+                <label>¿Asistirás a la celebración?</label>
+                <div class="radio-opciones">
+                    <label><input type="radio" name="asistencia" value="Sí, ¡ahí estaré con mucho gusto!" required> Sí, ¡ahí estaré!</label>
+                    <label><input type="radio" name="asistencia" value="Lo siento mucho, no podré asistir"> Lo siento, no puedo ir</label>
+                </div>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar Confirmación por WhatsApp</button>
+        </form>
+    </section>
+
+    <!-- Conexión al script externo -->
+    <script src="script.js"></script>
+</body>
+</html>

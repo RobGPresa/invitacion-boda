@@ -1,0 +1,610 @@
+/* ==========================================================================
+   1. REGISTRO DE FUENTE LOCAL (Elegancia manuscrita garantizada)
+   ========================================================================== */
+@font-face {
+    font-family: 'Alex Brush';
+    src: url('AlexBrush-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ==========================================================================
+   2. PALETA DE COLORES EDITORIAL (Lujo Minimalista)
+   ========================================================================== */
+:root {
+    --bg-boda: #fbf9f6;           /* Blanco marfil suave */
+    --oro-soft: #c5a880;          /* Dorado champán satinado */
+    --oro-oscuro: #8a7355;        /* Dorado profundo para contrastes */
+    --texto-noble: #2c2927;       /* Gris carbón suave */
+    --texto-mutated: #7a746f;     /* Gris topo sofisticado */
+    --blanco-puro: #ffffff;
+    --borde-fino: rgba(197, 168, 128, 0.25); /* Línea editorial dorada ultra delgada */
+}
+
+/* ==========================================================================
+   3. ESTILOS GENERALES & ARMONÍA
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-boda);
+    color: var(--texto-noble);
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    -webkit-font-smoothing: antialiased;
+}
+
+section {
+    padding: 120px 24px; /* Más aire entre secciones para transmitir lujo */
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Alex Brush', cursive;
+    font-size: 4.5rem;
+    color: var(--oro-soft);
+    font-weight: 400;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.descripcion-seccion {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--texto-mutated);
+    margin-bottom: 60px;
+}
+
+/* ==========================================================================
+   4. PORTADA / HERO (Estilo Alta Costura)
+   ========================================================================== */
+.hero {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+    background: linear-gradient(to bottom, rgba(251, 249, 246, 0.1), var(--bg-boda));
+}
+
+.subtitulo {
+    font-size: 0.8rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--oro-soft);
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.nombres-novios {
+    font-family: 'Alex Brush', cursive;
+    font-size: 6.5rem;
+    color: #3d3630;
+    line-height: 1;
+    margin-bottom: 35px;
+}
+
+.fecha-texto {
+    font-size: 0.85rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--texto-mutated);
+    border-top: 1px solid var(--borde-fino);
+    border-bottom: 1px solid var(--borde-fino);
+    padding: 12px 0;
+    display: inline-block;
+    min-width: 300px;
+}
+
+/* ==========================================================================
+   5. CONTADOR REGRESIVO (Efecto Etéreo Suspended)
+   ========================================================================== */
+.contador-seccion {
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.tiempo-bloque {
+    padding: 15px 5px;
+    border-bottom: 1px solid var(--borde-fino); /* Adiós cajas: ahora es una línea minimalista abajo */
+    min-width: 75px;
+    flex: 1;
+}
+
+.tiempo-bloque span {
+    font-size: 2.2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200; /* Letra más delgada y fina */
+    color: var(--oro-soft);
+    display: block;
+}
+
+.tiempo-bloque p {
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--texto-mutated);
+    margin-top: 8px;
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   6. BOTONES PREMIUM (Formatos Rectos Tipo Joyería)
+   ========================================================================== */
+.btn-principal {
+    display: inline-block;
+    background-color: var(--oro-soft);
+    color: var(--blanco-puro);
+    padding: 16px 45px;
+    text-decoration: none;
+    border-radius: 2px; /* Bordes casi rectos, máxima sofisticación */
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 20px rgba(197, 168, 128, 0.15);
+    border: none;
+}
+
+.btn-principal:hover {
+    background-color: var(--oro-oscuro);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 25px rgba(138, 115, 85, 0.25);
+}
+
+#btn-calendario {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 35px;
+    background-color: transparent;
+    color: var(--oro-soft);
+    border: 1px solid var(--borde-fino);
+    box-shadow: none;
+}
+
+#btn-calendario:hover {
+    border-color: var(--oro-oscuro);
+    color: var(--oro-oscuro);
+}
+
+/* ==========================================================================
+   7. ITINERARIO - LÍNEA DEL TIEMPO (Estilo Editorial Limpio)
+   ========================================================================== */
+.itinerario-timeline {
+    position: relative;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.itinerario-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    height: 100%;
+    width: 1px;
+    background-color: var(--borde-fino);
+    z-index: 1;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 60px;
+    padding-left: 60px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-icono {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    width: 25px;
+    height: 25px;
+    background-color: var(--bg-boda);
+    color: var(--oro-soft);
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-size: 0.75rem; /* Números romanos pequeños y elegantes */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    z-index: 2;
+}
+
+/* Transformación: El cuadro pierde el fondo blanco rígido y la sombra tosca */
+.timeline-contenido {
+    background: transparent;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid var(--borde-fino); /* Solo una línea divisoria fina */
+    box-shadow: none;
+    border-top: none;
+}
+
+.timeline-hora {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--oro-soft);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.timeline-contenido h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400; /* Letra más ligera, menos pesada */
+    color: var(--texto-noble);
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.timeline-contenido p {
+    font-size: 0.85rem;
+    color: var(--texto-mutated);
+}
+
+/* ==========================================================================
+   7.1 MESA DE REGALOS (Tarjetas Etéreas de Revista)
+   ========================================================================== */
+.opciones-regalos {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Más espacio para separar el contenido */
+    margin-top: 30px;
+}
+
+/* Adiós al fondo blanco de formulario; ahora es un diseño flotante con líneas divisorias */
+.tarjeta-regalo {
+    background: transparent;
+    padding: 0 0 30px 0;
+    border-bottom: 1px solid var(--borde-fino);
+    box-shadow: none;
+    text-align: left;
+    border-top: none;
+}
+
+.tarjeta-regalo h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: var(--texto-noble);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.tarjeta-regalo p {
+    font-size: 0.85rem;
+    color: var(--texto-mutated);
+    margin-bottom: 8px;
+}
+
+/* ==========================================================================
+   8. FORMULARIO DE ASISTENCIA (Limpio y de Alta Gama)
+   ========================================================================== */
+.formulario-asistencia {
+    background: transparent;
+    padding: 40px 0;
+    border-radius: 0;
+    text-align: left;
+    box-shadow: none;
+    border: none;
+    border-top: 1px solid var(--borde-fino); /* Una línea sutil para abrir la sección */
+}
+
+.input-group {
+    margin-bottom: 35px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--texto-mutated);
+}
+
+/* El input ahora es solo una línea inferior muy sofisticada, estilo formulario de hotel boutique */
+.input-group input[type="text"] {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid var(--borde-fino);
+    background-color: transparent;
+    border-radius: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: var(--texto-noble);
+    transition: all 0.3s ease;
+}
+
+.input-group input[type="text"]:focus {
+    outline: none;
+    border-bottom-color: var(--oro-oscuro);
+    box-shadow: none;
+}
+
+.radio-opciones {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 15px;
+}
+
+.radio-opciones label {
+    font-weight: 300;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: var(--texto-noble);
+}
+
+/* Rediseño estilizado para el botón de confirmación */
+.btn-enviar {
+    background-color: var(--oro-soft);
+    color: var(--blanco-puro);
+    border: none;
+    padding: 16px;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(197, 168, 128, 0.15);
+}
+
+.btn-enviar:hover {
+    background-color: var(--oro-oscuro);
+}
+
+/* ==========================================================================
+   11. SECCIONES: VESTIMENTA Y UBICACIÓN EDITORIAL
+   ========================================================================== */
+.tarjeta-vestimenta {
+    background: transparent;
+    padding: 30px 0;
+    border-radius: 0;
+    box-shadow: none;
+    max-width: 100%;
+    margin: 0 auto;
+    border: none;
+    border-bottom: 1px solid var(--borde-fino);
+    border-top: 1px solid var(--borde-fino);
+}
+
+.tarjeta-vestimenta h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.tarjetas-ubicacion {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.tarjeta-mapa {
+    background: transparent;
+    padding: 0 0 30px 0;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: left;
+    border-top: none;
+    border-bottom: 1px solid var(--borde-fino);
+}
+
+.tarjeta-mapa h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: var(--texto-noble);
+    margin-bottom: 10px;
+}
+
+.tarjeta-mapa p {
+    font-size: 0.85rem;
+    color: var(--texto-mutated);
+    margin-bottom: 8px;
+}
+
+.btn-secundario {
+    display: inline-block;
+    border: 1px solid var(--borde-fino);
+    color: var(--oro-soft);
+    padding: 10px 24px;
+    text-decoration: none;
+    border-radius: 2px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-secundario:hover {
+    border-color: var(--oro-soft);
+    background-color: transparent;
+    color: var(--oro-oscuro);
+}
+
+/* ==========================================================================
+   13. RESPONSIVE (Acomodo lado a lado inteligente para PC)
+   ========================================================================== */
+@media (min-width: 650px) {
+    .opciones-regalos, .tarjetas-ubicacion {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .tarjeta-regalo, .tarjeta-mapa {
+        flex: 1;
+        border-bottom: none; /* En pantallas grandes se dividen verticalmente */
+        border-right: 1px solid var(--borde-fino); /* Línea divisoria elegante en medio */
+        padding-right: 30px;
+        padding-bottom: 0;
+    }
+
+    .tarjeta-regalo:last-child, .tarjeta-mapa:last-child {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .radio-opciones {
+        flex-direction: row;
+        gap: 40px;
+    }
+}
+/* ==========================================================================
+   14. BOTÓN FLOTANTE DE MÚSICA DE LUJO
+   ========================================================================== */
+.control-musica-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--borde-fino);
+    color: var(--oro-soft);
+    font-size: 0.85rem; /* Ajustado para que el símbolo geométrico se vea fino */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegura que flote por encima de todo el contenido */
+    box-shadow: 0 10px 25px rgba(61, 54, 48, 0.08);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.control-musica-flotante:hover {
+    transform: scale(1.05) translateY(-2px);
+    border-color: var(--oro-soft);
+    color: var(--oro-oscuro);
+    box-shadow: 0 15px 30px rgba(197, 168, 128, 0.2);
+}
+
+/* Animación de pulso continuo cuando la música está sonando */
+@keyframes pulsoMusica {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.06); box-shadow: 0 10px 25px rgba(197, 168, 128, 0.25); }
+    100% { transform: scale(1); }
+}
+
+.musica-activa {
+    animation: pulsoMusica 2.5s infinite ease-in-out;
+    background-color: var(--blanco-puro);
+    border-color: var(--oro-soft);
+}
+/* ==========================================================================
+   15. DISEÑO RESPONSIVO EXCLUSIVO PARA CELULARES (Móvil First)
+   ========================================================================== */
+@media (max-width: 650px) {
+    /* Reducimos sutilmente los rellenos para ganar espacio en pantalla */
+    section {
+        padding: 60px 20px; 
+    }
+
+    /* Ajuste tipográfico: en celular los títulos gigantes pueden verse toscos */
+    h2 {
+        font-size: 3.2rem; 
+    }
+
+    .nombres-novios {
+        font-size: 4.5rem; 
+        margin-bottom: 25px;
+    }
+
+    .subtitulo {
+        font-size: 0.75rem;
+        letter-spacing: 5px;
+    }
+
+    .fecha-texto {
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+        min-width: 100%; /* El contenedor ocupa el ancho completo del celular */
+    }
+
+    /* El contador regresivo se acomoda en una cuadrícula de 2x2 muy limpia */
+    .timer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin: 30px 0;
+    }
+
+    .tiempo-bloque {
+        padding: 12px 5px;
+        border-bottom: 1px solid var(--borde-fino);
+    }
+
+    .tiempo-bloque span {
+        font-size: 1.8rem; /* Números un poco más compactos */
+    }
+
+    /* Botones más grandes para que sean fáciles de presionar con el dedo */
+    .btn-principal, .btn-enviar {
+        padding: 18px 30px;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        width: 100%; /* Botón de ancho completo en móvil */
+        text-align: center;
+    }
+
+    /* Separación de las líneas del itinerario en móvil */
+    .timeline-item {
+        margin-bottom: 35px;
+    }
+
+    /* Opciones del formulario: se apilan verticalmente para mejor lectura */
+    .radio-opciones {
+        flex-direction: column;
+        gap: 14px;
+        align-items: flex-start;
+    }
+
+    /* Mayor separación visual entre los bloques apilados */
+    .tarjeta-regalo, .tarjeta-mapa {
+        padding-bottom: 40px;
+    }
+}
